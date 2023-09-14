@@ -1,0 +1,252 @@
+* {
+  font-family: "Acme", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body-section {
+  width: 100%;
+  display: flex;
+  padding-bottom: 120px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../img/512727-nature-sky-reflection-fantasy-landscape-pond-water.jpg");
+  background-size: cover;
+}
+.body-section img {
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  align-items: center;
+  z-index: 99;
+}
+header .logo {
+  font-size: 1.5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgb(255, 94, 0);
+}
+header .navigation a {
+  position: relative;
+  font-size: 1.2em;
+  color: rgb(255, 94, 0);
+  margin-left: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+header .navigation a::after {
+  content: "";
+  position: absolute;
+  color: aliceblue;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+header .navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header .navigation .btnlogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid grey;
+  outline: none;
+  font-size: 1.2em;
+  color: rgb(241, 135, 28);
+  font-weight: 500;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+header .navigation .btnlogin-popup:hover {
+  background: #a08181;
+  color: rgb(248, 244, 244);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 100px;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease-in, height 0.2s ease;
+}
+.wrapper.active {
+  height: 520px;
+}
+.wrapper.active-popup {
+  transform: scale(1);
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+  align-items: center;
+}
+.wrapper .form-box.login {
+  transition: transform 0.2s ease;
+  transform: translateX(0);
+}
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translate(400px);
+}
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  background: rgba(214, 89, 16, 0.918);
+  height: 45px;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.wrapper .form-box h1 {
+  font-size: 2em;
+  text-align: center;
+  color: rgb(230, 57, 66);
+}
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #161616;
+  margin: 30px 0;
+}
+.wrapper .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.wrapper .input-box input:focus ~ label, .wrapper .input-box input:valid ~ label {
+  top: -5px;
+}
+.wrapper .input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: rgb(224, 198, 163);
+  line-height: 57px;
+}
+.wrapper .remember-forgot {
+  font-size: 0.9em;
+  color: #000508;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .remember-forgot label input {
+  accent-color: #000000;
+  margin-right: 3px;
+}
+.wrapper .remember-forgot a {
+  color: #000000;
+  text-decoration: none;
+}
+.wrapper .remember-forgot a:hover {
+  text-decoration: underline;
+}
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 1em;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.register-login {
+  font-size: 1em;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+  margin: 25px 0 10px;
+}
+.register-login p a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.register-login p a:hover {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 80px;
+  color: #f0f4f8;
+  background-color: #000000;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

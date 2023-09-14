@@ -1,0 +1,31 @@
+@media screen and (max-width: 800px) {
+
+.body-section{
+    padding-bottom: 80px;
+}
+img{
+    width: 100%;
+}
+.logo{
+    font-size: 1.1em;
+    margin-left: -120px;
+    color: rgb(255, 94, 0);
+}
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    margin-left: 10px;   
+}
+header{
+    top: 0;
+    left: 70px;
+}
+.navigation .btnlogin-popup{
+    width: 100px;
+    height: 40px;
+    border: 1px solid grey;
+    font-size: 1.2em;
+    color: rgb(238, 122, 6);
+}
+
+}
